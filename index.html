@@ -1,1 +1,135 @@
+<html>
+	<head>
+		<title>bxs_errz</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+				body {
+					margin: 0px;
+					padding: 0px;
+					font: normal 13px/100% sans-serif;
+				}
+				.container {
+					width: 55%;
+					margin: 0px auto;
+				}
+				@media screen and (max-width: 500px){
+					.container {
+						width: 100%;
+					}
+				}
+				span {
+					display: none;
+					margin-bottom: 150px;
+				}
+				span.display {
+					display: block;
+				}
+				.content img {
+					width: 100%;
+					height: auto;
+				}
+				.content {
+					position: relative;
+					overflow: hidden;
+					cursor: pointer;
+				}
+				.overlay {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					opacity: .6;
+					background-image: linear-gradient(to bottom right,#002f4d,#dc4225);
+				}
+				#loadMore {
+					margin: 0px auto;
+					color: #33739E;
+					width: 10%;
+					cursor: pointer;
+					text-align: center;
+					font-size: 155px;
+				}
+				#status {
+					height: 30px;
+					left: 50%;
+					margin: -30px 0 0 -20px;
+					position: absolute;
+					top: 50%;
+					width: 50%;
+					z-index: 1;
+				}
+				.content-overlay{
+					position: absolute;
+					z-index: 55;
+					background:  rgba(0,0,0,0.5);
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+				}
+				.text {
+					margin: 25px;
+					font-size: 12px;
+					color: #adacac;
+				}
+		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function () {
+				
+				$("span").slice(0, 8).addClass("display");
+				$("#loadMore").on("click", function (e) {
+					e.preventDefault();
+					function load() {
+					$("span:hidden").slice(0, 8).addClass("display");
+					$(".fa-refresh").removeClass("fa-spin");
+					}
+					if ($("span:hidden").length == 0) {
+						$("#loadMore").fadeOut("slow");
+					}
+					$(".fa-refresh").addClass("fa-spin");
+					setTimeout(load, 10000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<noscript>
+			<meta http-equiv="refresh" content="0;url=noscript">
+		</noscript>
+		<div class="container">
+		</div>
+		<div id="loadMore">
+			<i class="fa fa-refresh"></i>
+		</div>
+		<script type="text/javascript">
+		image = [{
+				"id":1,
+				"title":"21 Savage, Offset & Metro Boomin - Without Warning ",
+				"url":"http://www.xxlmag.com/files/2017/11/21-Savage-Offset-Without-Warning-Cover.jpeg"
+			},{
+				"id":2,
+				"title":"21 Savage, Offset & Metro Boomin - Without Warning ",
+				"url":"http://www.xxlmag.com/files/2017/11/21-Savage-Offset-Without-Warning-Cover.jpeg"
+			}],
+			$.each(image,function(key, value){
+				var id = value.id,
+				title = value.title,
+				url = value.url;
+				if(id.toString().lenght === 1){
+					id = '0' + id;
+				}else{
+					id = '' + id;
+				}
+				$('.container').append( 
+					'<span><div class="content"><div class="content-overlay"><div id="status"></div></div><div class="overlay"></div><img src="'+url+'"></div><div class="text">#'+title+'@bxs_errz</div></span>'
+					
+					);
+			});
+		</script>		
+	</body>
+</html>
 
