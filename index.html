@@ -52,14 +52,7 @@
 					width: 100%;
 			}
 	}
-  span {
-					display: none;
-					margin-bottom: 150px;
-				}
-				span.display {
-					display: block;
-				}
-
+ 
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -78,22 +71,7 @@
       };  
 
     });
- $(function () {
-				
-				$("span").slice(0, 8).addClass("display");
-				$("#loadMore").on("click", function (e) {
-					e.preventDefault();
-					function load() {
-					$("span:hidden").slice(0, 8).addClass("display");
-					$(".fa-refresh").removeClass("fa-spin");
-					}
-					if ($("span:hidden").length == 0) {
-						$("#loadMore").fadeOut("slow");
-					}
-					$(".fa-refresh").addClass("fa-spin");
-					setTimeout(load, 10000);
-				});
-      
+ 
   </script>
 </head>
 <body>
