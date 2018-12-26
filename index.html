@@ -54,25 +54,6 @@
 	}
  
   </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript">
-   
-    var wrapper_var = ( $('#video-wrapper').offset().top + $('#video-wrapper').height() );
-
-    $(window).scroll(function(){  
-
-      if ( $(window).scrollTop() > wrapper_var + 500 ) { 
-        $('#video-wrapper').css('bottom','0'); 
-      } else if ( $(window).scrollTop() < wrapper_var + 200) {  
-        $('#video-wrapper').removeClass('out').addClass('in');     
-      } else {       
-        $('#video-wrapper').removeClass('in').addClass('out');   
-        $('#video-wrapper').css('bottom','-500px');             
-      };  
-
-    });
- 
-  </script>
 </head>
 <body>
   <noscript>
@@ -205,9 +186,25 @@
     <span>hrttytytyutty<br>tdrtyryry</span>
     <span>hrttytytyutty<br>tdrtyryry</span>  
 	</div>
-	<div id="loadMore">
-		&#8635;
-	</div>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+   
+    var wrapper_var = ( $('#video-wrapper').offset().top + $('#video-wrapper').height() );
+
+    $(window).scroll(function(){  
+
+      if ( $(window).scrollTop() > wrapper_var + 500 ) { 
+        $('#video-wrapper').css('bottom','0'); 
+      } else if ( $(window).scrollTop() < wrapper_var + 200) {  
+        $('#video-wrapper').removeClass('out').addClass('in');     
+      } else {       
+        $('#video-wrapper').removeClass('in').addClass('out');   
+        $('#video-wrapper').css('bottom','-500px');             
+      };  
+
+    });
+ 
+  </script>
 </body>
 </html>
 
