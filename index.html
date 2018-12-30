@@ -91,22 +91,11 @@ z-index: 10;
 #down {
   z-index: 5;
   }
-#overlay_content {
- position:absolute; 
- top: 0;
- right: 0;
- bottom: 0;
- left:0;
- height:100%;
- width:100%;
- background:red;
-  }
 </style>
 </head>
 <body>
 <a href="javascript:" id="return-to-top">up</a>
 <a href="javascript:" id="down">down</a>
-<div id="overlay_content"></div>
 <div id="video_content">
 <video id="video_tag" oncontextmenu="return false;">
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
@@ -124,16 +113,12 @@ $(window).scroll(function() {
     }
 });
   
-$('#overlay_content').click(function() {      
-  $('#video_tag')[0].play();
-  $(this).hide();
-});
-  
 $('#return-to-top').click(function() {      
     $('body,html').animate({
         scrollTop : 0                       
     }, 500);
 });
+  
  $('#down').click(function() {
      $('body,html').animate({
          scrollTop : $('#content').offset().top
