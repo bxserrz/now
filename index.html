@@ -90,10 +90,10 @@ z-index: 10;
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 500) {        
         $('#return-to-top').fadeIn(200);
-        $('video')[0].pause();
+        $('#video_content video')[0].pause();
     } else {
         $('#return-to-top').fadeOut(200);  
-        $('video')[0].play();
+        $('#video_content video')[0].play();
     }
 });
   
