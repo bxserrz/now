@@ -106,10 +106,10 @@ z-index: 10;
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 500) {        
         $('#return-to-top').fadeIn(200);
-        $('#video_tag')[0].pause();
+        $('#video_tag').pause();
     } else {
         $('#return-to-top').fadeOut(200);  
-        $('#video_tag')[0].play();
+        $('#video_tag').play();
     }
 });
   
