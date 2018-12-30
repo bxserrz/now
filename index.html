@@ -102,13 +102,13 @@ margin-top: 800px;
 </head>
 <body>
 <a href="javascript:" id="return-to-top">up</a>
+<div id="arrow-down">
+<a href="#content" id="down">down</a>
+</div>
 <div id="video_content">
 <video controls>
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
 </video>
-<div id="arrow-down">
-<a href="#content" id="down">down</a>
-</div>
 </div>
 <div id="content">content</div>
 <script>
@@ -124,7 +124,11 @@ $('#return-to-top').click(function() {
         scrollTop : 0                       
     }, 500);
 });
-
+ $('#down').click(function() {
+     $('body,html').animate({
+         scrollTop : $('#content').offset().top
+     }, 1500);
+ });
 </script>
 </body>
 </html>
