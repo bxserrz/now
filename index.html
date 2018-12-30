@@ -103,10 +103,8 @@ z-index: 10;
 </div>
 <div id="content">content</div>
 <script>
-$(document).ready(function() {
-    $("#video_tag").get(0).play();
-});
-  
+$('#video_tag')[0].autoplay = true;
+
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 500) {        
         $('#return-to-top').fadeIn(200);
