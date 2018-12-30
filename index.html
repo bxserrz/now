@@ -97,14 +97,14 @@ z-index: 10;
 <a href="javascript:" id="return-to-top">up</a>
 <a href="javascript:" id="down">down</a>
 <div id="video_content">
-<video id="video_tag" oncontextmenu="return false;" onload="this.play();">
+<video id="video_tag" oncontextmenu="return false;">
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
 </video>
 </div>
 <div id="content">content</div>
 <script>
 $(window).scroll(function() {
-    if ($(this).scrollTop() >= 500) {        
+    if ($(this).scrollTop() >= 200) {        
         $('#return-to-top').fadeIn(200);
         $('#video_tag')[0].pause();
     } else {
@@ -116,7 +116,7 @@ $(window).scroll(function() {
 $('#return-to-top').click(function() {      
     $('body,html').animate({
         scrollTop : 0                       
-    }, 500);
+    }, 200);
 });
   
  $('#down').click(function() {
