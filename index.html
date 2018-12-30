@@ -3,66 +3,43 @@
 <title></title>
 <style>
 body{
+width: 100%; 
+height: 100%; 
 padding: 0;
 margin: 0;
 }
 
 #video_wrapper{
-position: relative;
-width: 100%;
-height: 500px;
-overflow: hidden;
+position: fixed;
+bottom: 0;
+right: 0;
+height: auto;
+width: auto;
+min-height: 100%;
+min-width: 100%;
+z-index: -9999;
 }
 
 video{
-min-width: 100%; 
-min-height: 100%; 
-width: auto;
-height: auto;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-z-index: -1;
-
+width: 100%;
+max-width: 100%;
 }
-
-.gradient{
-background-image:  linear-gradient(to top left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.55));
-min-width: 100%; 
-min-height: 100%; 
-width: auto;
-height: auto;
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-}
-
-
-#video_icon{
-position: absolute;
-top: 25px;
-left: 25px;
-color: #fff;
-cursor: pointer;
-z-index: 10;
-}
-
-#video_icon:after{
-content: '\2807';
-font-size: 20px;
+  
+#content {
+height: 2000px;
+background: tomato;
+min-height: 100%;
+min-width: 100%;
+background-size: cover;
+margin-top: 800px;
 }
 
 </style>
 </head>
 <body>
 <div id="video_wrapper">
-<div class="gradient">
-</div>
 <video src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" autoplay loop ></video>
-<span id="video_icon"></span>
 </div>
+<div id="content">content</div>
 </body>
 </html>
