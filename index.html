@@ -75,6 +75,7 @@ z-index: 10;
   text-decoration: none;
   font-size: 35px;
   }
+#play_content {position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent;z-index: 1;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -84,7 +85,7 @@ z-index: 10;
 <video preload="metadata" oncontextmenu="return false;" autoplay>
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
 </video>
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:green;z-index: 1;cursor:pointer;"></div>
+<div id="play_content"></div>
 </div>
 <div id="content"></div>
 <script>
@@ -109,6 +110,10 @@ $('#return-to-top').click(function() {
          scrollTop : $('#content').offset().top
      }, 1500);
  });
+  
+$('#play_content').click(function() {      
+ $('#video_content video')[0].paused ? $('#video_content video')[0].play() : $('#video_content video')[0].pause();
+});
 </script>
 </body>
 </html>
