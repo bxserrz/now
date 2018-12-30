@@ -97,7 +97,7 @@ z-index: 10;
 <a href="javascript:" id="return-to-top">up</a>
 <a href="javascript:" id="down">down</a>
 <div id="video_content">
-<video autoplay loop>
+<video id="video_tag">
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
 </video>
 </div>
@@ -105,9 +105,11 @@ z-index: 10;
 <script>
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 500) {        
-        $('#return-to-top').fadeIn(200);    
+        $('#return-to-top').fadeIn(200);
+        $('#video_tag')[0].pause();
     } else {
-        $('#return-to-top').fadeOut(200);   
+        $('#return-to-top').fadeOut(200);  
+        $('#video_tag')[0].play();
     }
 });
 $('#return-to-top').click(function() {      
