@@ -36,7 +36,6 @@ transform: translate(-50%,-50%);
 -ms-transform: translateX(-50%) translateY(-50%);
 -moz-transform: translateX(-50%) translateY(-50%);
 -webkit-transform: translateX(-50%) translateY(-50%);
-cursor:pointer;
 }
   
 #content {
@@ -113,6 +112,11 @@ $(window).scroll(function() {
         $('#video_tag')[0].play();
     }
 });
+  
+$('#video_content').click(function() {      
+  $('#video_tag')[0].play();
+});
+  
 $('#return-to-top').click(function() {      
     $('body,html').animate({
         scrollTop : 0                       
