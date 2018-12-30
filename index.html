@@ -87,7 +87,17 @@ margin-top: 800px;
     color: #fff;
     top: 5px;
 }
-
+#down {
+ position: absolute;
+ top: 20px;
+ left: 20px;
+ color: #fff;
+ padding: 5px 10px 5px 5px
+}
+  #arrow-down {
+  position:relative;
+  margin: 0;
+  }
 </style>
 </head>
 <body>
@@ -96,6 +106,9 @@ margin-top: 800px;
 <video controls>
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
 </video>
+<div id="arrow-down">
+<a id="down" href="#">Scroll down &darr;</a>
+</div>
 </div>
 <div id="content">content</div>
 <script>
@@ -111,6 +124,11 @@ $('#return-to-top').click(function() {
         scrollTop : 0                       
     }, 500);
 });
+ $("#down").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#content").offset().top
+     }, 1500);
+ });
 </script>
 </body>
 </html>
