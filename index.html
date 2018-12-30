@@ -124,9 +124,9 @@ $('#return-to-top').click(function() {
         scrollTop : 0                       
     }, 500);
 });
- $("#down").click(function() {
+ $('#down').click(function() {
      $('body,html').animate({
-         scrollTop : 0
+         scrollTop : $('#content').offset().top
      }, 1500);
  });
 </script>
