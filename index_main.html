@@ -93,19 +93,20 @@ z-index: 10;
   font-size: 105px;
   opacity:0.5;
   }
-#play_content {position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent;z-index: 1;cursor:pointer;}
+#nav_content {position:fixed;top:0;left:0;width:100%;height:100%;background-color:transparent;z-index: 1;cursor:pointer;}
 </style>
 </head>
 <body>
 <a href="javascript:" id="return-to-top"><i class="fa">&#xf106;</i></a>
 <a href="javascript:" id="down"><i class="fa">&#xf107;</i></a>
+<div id="nav_content">
 <div id="play_next"><i class="fa">&#xf104;</i></div>
 <div id="play_prev"><i class="fa">&#xf105;</i></div>
+</div>
 <div id="video_content">
 <video preload="metadata" oncontextmenu="return false;" autoplay>
 <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
 </video>
-<div id="play_content"></div>
 </div>
 <div id="content"></div>
 <script>
