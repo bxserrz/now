@@ -38,7 +38,7 @@ transform: translate(-50%,-50%);
   height: 100%;
   width: 50%;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
@@ -64,7 +64,7 @@ transform: translate(-50%,-50%);
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   top: 0;
   left: 0;
   background-color: #111;
@@ -72,7 +72,12 @@ transform: translate(-50%,-50%);
   transition: 0.5s;
   padding-top: 60px;
 }
-
+#nav_btn{
+	position:absolute;
+	top:10px;
+	left:10px;
+	z-index:15;
+}
 </style>
 </head>
 <body>
@@ -92,13 +97,10 @@ transform: translate(-50%,-50%);
     <i style="font-size:24px" class="fa">&#xf061;</i>
   </div>
 </div>
-<span style="font-size:30px;cursor:pointer;position:absolute;top:10px;left:10px;" onclick="openNav()">&#9776;</span>	
+<span id="nav_btn" onclick="openNav()">&#9776;</span>	
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+ 
 </div>
 	
 	
