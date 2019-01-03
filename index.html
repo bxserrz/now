@@ -60,6 +60,18 @@ transform: translate(-50%,-50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.sidenav {
+  height: 100%;
+  width: 269px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
 </style>
 </head>
@@ -80,6 +92,15 @@ transform: translate(-50%,-50%);
     <i style="font-size:24px" class="fa">&#xf061;</i>
   </div>
 </div>
+	
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+	
 	
 </div>
 <script>
