@@ -2,12 +2,45 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script>
+  $( function() {
+    $( "#video_wrapper" ).draggable();
+    $( "#video_wrapper" ).resizable();
+  } );
+</script>
 <title></title>
 <style>
 body{
 padding: 0;
 margin: 0;
 }
+#video_wrapper{
+  position:fixed;
+  top:5%;
+  left:5%;
+  z-index:50;
+  width: 150px; height: 150px;
+  overflow: hidden;
+}
+	
+video {
+	 min-width: 100%; 
+  min-height: 100%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+	
 div.gallery {
   border: 1px solid #ccc;
 }
@@ -58,6 +91,13 @@ div.desc {
 </style>
 </head>
 <body>
+<div id="video_wrapper" class="ui-widget-content">
+  <video  controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</div>
 <div id="content">
 <div class="responsive">
   <div class="gallery">
