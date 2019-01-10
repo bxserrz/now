@@ -16,6 +16,7 @@ width: 50%;
 height: 1000px; 
 overflow: hidden;
 margin:0px auto 550px;
+display:none;
 }
 
 video {
@@ -34,6 +35,22 @@ transform: translate(-50%,-50%);
 	    width: 100%;
   }
 }
+	
+i {
+border: solid black;
+border-width: 0 3px 3px 0;
+display: inline-block;
+padding: 3px;
+}
+	
+#loadMore {
+width:100%;
+}
+	
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery.visible.min.js"></script>
@@ -50,7 +67,17 @@ $(window).scroll(function() {
         }
     });
 });
-
+$(document).ready(function(){
+  $(".video-wrapper").slice(0, 4).show();
+  $("#loadMore").on("click", function(e){
+    e.preventDefault();
+    $(".video-wrapper:hidden").slice(0, 4).slideDown();
+    if($(".video-wrapper:hidden").length == 0) {
+      $("#loadMore").text("No Content").addClass("noContent");
+    }
+  });
+  
+});
 </script>
 <div class="video-wrapper">
 <video>
@@ -94,5 +121,6 @@ $(window).scroll(function() {
   Your browser does not support the video tag.
 </video>
 </div>
+<div id="loadMore"><i class="arrow down"></i></div>
 </body>
 </html>
