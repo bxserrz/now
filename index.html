@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>vid</title>
 <style>
 body {
@@ -12,8 +13,9 @@ margin:0;
 .video-wrapper {
 position: relative;
 width: 50%;
-height: 600px; 
+height: 1000px; 
 overflow: hidden;
+margin:;
 }
 
 video {
@@ -46,46 +48,52 @@ $(window).scroll(function() {
         } else {
             $(this)[0].pause();
         }
-    })
+    });
+});
+
+$( "video" ).each(function() {
+    $(this).on("click", function(){
+        this.paused ? $(this)[0].play() : $(this)[0].pause();
+    });
 });
 </script>
 <div class="video-wrapper">
-<video controls>
+<video>
   <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
   <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
 </div>
 <div class="video-wrapper">
-<video controls>
+<video>
   <source src="http://www.onirikal.com/videos/mp4/audi_a7.mp4" type="video/mp4">
   <source src="http://www.onirikal.com/videos/mp4/audi_a7.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
 </div>
 <div class="video-wrapper">
-<video controls>
+<video>
   <source src="http://www.onirikal.com/videos/mp4/cara_oculta.mp4" type="video/mp4">
   <source src="http://www.onirikal.com/videos/mp4/cara_oculta.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
 </div>
 	<div class="video-wrapper">
-<video controls>
+<video>
   <source src="http://www.onirikal.com/videos/mp4/elcallejon.mp4" type="video/mp4">
   <source src="http://www.onirikal.com/videos/mp4/elcallejon.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
 </div>
 	<div class="video-wrapper">
-<video controls>
+<video>
   <source src="http://www.onirikal.com/videos/mp4/forajidos.mp4" type="video/mp4">
   <source src="http://www.onirikal.com/videos/mp4/forajidos.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
 </div>
 	<div class="video-wrapper">
-<video controls>
+<video>
   <source src="http://www.onirikal.com/videos/mp4/emmaevans.mp4" type="video/mp4">
   <source src="http://www.onirikal.com/videos/mp4/emmaevans.ogg" type="video/ogg">
   Your browser does not support the video tag.
