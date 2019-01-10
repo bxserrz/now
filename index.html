@@ -13,7 +13,7 @@ margin:0;
 #video-wrapper {
 position: fixed;
 width: 50%;
-height:1000px; 
+height:500px; 
 overflow: hidden;
 top:0;
 }
@@ -36,10 +36,10 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("video-wrapper").style.height = "500px";
+    document.getElementById("#video-wrapper").style.height = "500px";
     
   } else {
-    document.getElementById("video-wrapper").style.height = "1000px";
+    document.getElementById("#video-wrapper").style.height = "1000px";
    
   }
 }
