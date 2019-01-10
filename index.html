@@ -51,14 +51,9 @@ $(window).scroll(function() {
     });
 });
 
-$( "video" ).each(function() {
-    $(this).on("click", function(){
-        this.paused ? $(this)[0].play() : $(this)[0].pause();
-    });
-});
 </script>
 <div class="video-wrapper">
-<video>
+<video onclick="this.paused ? this.play() : this.pause();">
   <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
   <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.ogg" type="video/ogg">
   Your browser does not support the video tag.
